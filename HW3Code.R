@@ -27,6 +27,7 @@ blake_numbers <- c(6, 10, 14, 15, 21, 22, 26, 33, 34, 35, 38, 39, 46, 51, 55,
                    57, 58, 62, 65, 69, 75, 77, 82, 85, 86, 87, 91, 93, 94, 95)
 
 # check if the number is a product of unique prime numbers
+# return true if 
 is_product_of_unique_primes <- function(n) {
   factors <- primeFactors(n)
   return(length(factors) == 2 && length(factors) == length(unique(factors)))
@@ -40,7 +41,7 @@ is_product_of_unique_primes <- function(n) {
 valid_numbers <- which(sapply(1:99, is_product_of_unique_primes))
 
 # identify the incorecct number
-incorrect_number <- setdiff(blake_numbers,valid_numbers)
+(incorrect_number <- setdiff(blake_numbers,valid_numbers))
 
 # identify missing numbers
-missing_number <- setdiff(valid_numbers, blake_numbers)
+(missing_number <- setdiff(valid_numbers, blake_numbers))
